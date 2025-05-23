@@ -1,6 +1,6 @@
 package com.xworkz.room.booking;
 
-public class EoomBookingRunner {
+public class RoomBookingRunner {
 
     public static void main(String[] args) {
 
