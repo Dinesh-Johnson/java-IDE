@@ -1,3 +1,7 @@
+package runner;
+
+import com.xworz.method.Team;
+
 public class TeamRunner {
 
     public static void main(String[] args) {

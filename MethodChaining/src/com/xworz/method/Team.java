@@ -1,3 +1,5 @@
+package com.xworz.method;
+
 public class Team {
 
     public Team(){
@@ -12,11 +14,11 @@ public class Team {
     public void win(){
         win("CSK",18);
         team("Mumbai indians");
-        System.out.println("These are the Winning Team");
+        System.out.println("These are the Team");
     }
     public void win(String name,int wins){
         team("Chennai Super Kings");
-        System.out.println("The Team wins -"+name+" "+wins+" wins");
+        System.out.println("The com.xworz.method.Team wins -"+name+" "+wins+" wins");
     }
     public static void team(String name){
         System.out.println("The successful IPL team is :"+name);
