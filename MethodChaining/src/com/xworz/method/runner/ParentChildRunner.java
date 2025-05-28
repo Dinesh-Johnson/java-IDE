@@ -1,4 +1,9 @@
-package com.xworz.method;
+package com.xworz.method.runner;
+
+import com.xworz.method.inheritence.Child;
+import com.xworz.method.inheritence.Child2;
+import com.xworz.method.inheritence.Child3;
+import com.xworz.method.inheritence.Parent;
 
 public class ParentChildRunner {
     public static void main(String[] args) {

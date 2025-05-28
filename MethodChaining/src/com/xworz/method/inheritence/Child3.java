@@ -1,6 +1,6 @@
-package com.xworz.method;
+package com.xworz.method.inheritence;
 
-public class Child3 extends Child{
+public class Child3 extends Child {
     String eyeColour="Blue";
 
     public void String(){

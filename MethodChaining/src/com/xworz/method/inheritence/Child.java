@@ -1,6 +1,6 @@
-package com.xworz.method;
+package com.xworz.method.inheritence;
 
-public class Child extends Parent{
+public class Child extends Parent {
     int age=10;
     String genre ="melody";
 

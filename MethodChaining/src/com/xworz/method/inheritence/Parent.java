@@ -1,4 +1,4 @@
-package com.xworz.method;
+package com.xworz.method.inheritence;
 
 public class Parent {
     String skinColour="White";
