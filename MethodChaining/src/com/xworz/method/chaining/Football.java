@@ -1,4 +1,4 @@
-package com.xworz.method;
+package com.xworz.method.chaining;
 
 public class Football {
 

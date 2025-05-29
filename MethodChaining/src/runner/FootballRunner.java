@@ -1,6 +1,6 @@
 package runner;
 
-import com.xworz.method.Football;
+import com.xworz.method.chaining.Football;
 
 public class FootballRunner {
     public static void main(String[] args) {

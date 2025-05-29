@@ -1,6 +1,6 @@
 package runner;
 
-import com.xworz.method.PetClinic;
+import com.xworz.method.chaining.PetClinic;
 
 public class PetClinicRunner {
     public static void main(String[] args) {

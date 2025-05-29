@@ -1,6 +1,6 @@
 package runner;
 
-import com.xworz.method.SocialMedia;
+import com.xworz.method.chaining.SocialMedia;
 
 public class SocialMediaRunner {
     public static void main(String[] args) {

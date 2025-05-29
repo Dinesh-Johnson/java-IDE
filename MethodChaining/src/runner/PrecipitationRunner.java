@@ -1,6 +1,6 @@
 package runner;
 
-import com.xworz.method.Precipitaion;
+import com.xworz.method.chaining.Precipitaion;
 
 public class PrecipitationRunner {
     public static void main(String[] args) {

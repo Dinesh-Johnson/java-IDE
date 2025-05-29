@@ -1,6 +1,6 @@
 package runner;
 
-import com.xworz.method.SuperMarket;
+import com.xworz.method.chaining.SuperMarket;
 
 public class SuperMarketRunner {
     public static void main(String[] args) {

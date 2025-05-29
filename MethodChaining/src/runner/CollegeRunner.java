@@ -1,6 +1,6 @@
 package runner;
 
-import com.xworz.method.College;
+import com.xworz.method.chaining.College;
 
 public class CollegeRunner {
     public static void main(String[] args) {

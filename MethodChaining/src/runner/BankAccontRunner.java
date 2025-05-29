@@ -1,6 +1,6 @@
 package runner;
 
-import com.xworz.method.BankAccount;
+import com.xworz.method.chaining.BankAccount;
 
 public class BankAccontRunner {
     public static void main(String[] args) {

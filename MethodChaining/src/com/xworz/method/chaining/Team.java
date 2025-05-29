@@ -1,4 +1,4 @@
-package com.xworz.method;
+package com.xworz.method.chaining;
 
 public class Team {
 
@@ -18,7 +18,7 @@ public class Team {
     }
     public void win(String name,int wins){
         team("Chennai Super Kings");
-        System.out.println("The com.xworz.method.Team wins -"+name+" "+wins+" wins");
+        System.out.println("The com.xworz.method.chaining.Team wins -"+name+" "+wins+" wins");
     }
     public static void team(String name){
         System.out.println("The successful IPL team is :"+name);

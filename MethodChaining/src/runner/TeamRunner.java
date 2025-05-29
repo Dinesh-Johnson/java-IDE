@@ -1,6 +1,6 @@
 package runner;
 
-import com.xworz.method.Team;
+import com.xworz.method.chaining.Team;
 
 public class TeamRunner {
 

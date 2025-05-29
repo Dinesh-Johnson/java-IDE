@@ -1,6 +1,6 @@
 package runner;
 
-import com.xworz.method.Hospital;
+import com.xworz.method.chaining.Hospital;
 
 public class HospitalRunner {
     public static void main(String[] args) {
