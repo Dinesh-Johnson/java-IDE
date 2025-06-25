@@ -6,6 +6,7 @@ import com.xworkz.amazon.things.Appliances;
 import com.xworkz.amazon.things.TelevisionDTO;
 
 import java.util.Collection;
+import java.util.Iterator;
 
 public class TelevisionRunner {
     public static void main(String[] args) {
@@ -14,9 +15,11 @@ public class TelevisionRunner {
         televisionRepository.showAll();
         Collection<TelevisionDTO> allTvs = televisionRepository.showAll();
 
-        for(TelevisionDTO a : allTvs){
-            if (a.getSizeInInches() >50) {
-                System.out.println(a);
+        Iterator<TelevisionDTO> itr = allTvs.iterator();
+        while (itr.hasNext()) {
+            TelevisionDTO tv = itr.next();
+            if (tv.getSizeInInches() > 50) {
+                System.out.println(tv);
             }
         }
     }

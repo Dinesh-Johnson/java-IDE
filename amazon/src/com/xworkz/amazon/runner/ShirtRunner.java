@@ -6,6 +6,7 @@ import com.xworkz.amazon.things.ShirtDTO;
 
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Iterator;
 
 public class ShirtRunner {
     public static void main(String[] args) {
@@ -13,8 +14,10 @@ public class ShirtRunner {
         ShirtRepository shirtRepository=new ShirtRepoImpl();
         Collection<ShirtDTO> collection= shirtRepository.findAll();
 
-        for (ShirtDTO s:collection){
-            if (s.getSize() =="XL"){
+        Iterator<ShirtDTO> itr = collection.iterator();
+        while (itr.hasNext()) {
+            ShirtDTO s = itr.next();
+            if (s.getSize() == "XL") {
                 System.out.println(s);
             }
         }

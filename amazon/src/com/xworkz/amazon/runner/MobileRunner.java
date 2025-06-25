@@ -5,6 +5,7 @@ import com.xworkz.amazon.repository.MobileRepoImpl;
 import com.xworkz.amazon.things.MobileDTO;
 
 import java.util.Collection;
+import java.util.Iterator;
 
 public class MobileRunner {
 
@@ -14,8 +15,10 @@ public class MobileRunner {
         Collection<MobileDTO> collection= mobileRepo.findAll();
 
 
-        for(MobileDTO m : collection){
-            if(m.getRamGB()>=8){
+        Iterator<MobileDTO> itr = collection.iterator();
+        while (itr.hasNext()) {
+            MobileDTO m = itr.next();
+            if (m.getRamGB() >= 8) {
                 System.out.println(m);
             }
         }
