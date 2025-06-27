@@ -1,7 +1,7 @@
 package com.lambdaexpressions.interfaces;
 
 @FunctionalInterface
-public interface MyIntPredicate {
+public interface MyLongSupplier {
 
-    boolean test(int n);
+    long	getAsLong();
 }
