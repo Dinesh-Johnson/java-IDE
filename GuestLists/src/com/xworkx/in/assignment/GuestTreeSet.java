@@ -1,8 +1,5 @@
-package com.xworkx.in.guestmain;
+package com.xworkx.in.assignment;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
 import java.util.TreeSet;
 
 public class GuestTreeSet {

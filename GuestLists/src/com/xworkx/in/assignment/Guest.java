@@ -1,7 +1,5 @@
-package com.xworkx.in.guestmain;
+package com.xworkx.in.assignment;
 
-import java.lang.reflect.Array;
-import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
