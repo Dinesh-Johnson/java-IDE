@@ -5,6 +5,7 @@ import com.xworkz.amazon.repository.LaptopRepository;
 import com.xworkz.amazon.things.LaptopDTO;
 
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.Iterator;
 
 public class LapotopRunner {
@@ -14,13 +15,15 @@ public class LapotopRunner {
         LaptopRepository laptopRepository=new LaptopRepoImpl();
         Collection<LaptopDTO> collections=laptopRepository.findAll();
 
-        Iterator<LaptopDTO> itr = collections.iterator();
-        while (itr.hasNext()) {
-            LaptopDTO l = itr.next();
-            if (l.getPrice() > 40000) {
-                System.out.println(l);
-            }
-        }
+//        Iterator<LaptopDTO> itr = collections.iterator();
+//        while (itr.hasNext()) {
+//            LaptopDTO l = itr.next();
+//            if (l.getPrice() > 40000) {
+//                System.out.println(l);
+//            }
+//        }
+
+        collections.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
 
     }
 }
