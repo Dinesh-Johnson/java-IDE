@@ -8,17 +8,62 @@ import com.xworkz.amazon.things.ApplicationDTO;
 import com.xworkz.amazon.things.OwnerDTO;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class ApplicationRunner {
     public static void main(String[] args) {
-
         ApplicationRepository applicationRepository = new ApplicationRepositoryImpl();
 
         List<ApplicationDTO> application = applicationRepository.findAll();
 
+       // streamMethod(application);
+       // listiteratorMethods(application);
+
+        Map<String,String> appMap = new HashMap<>();
+
+        //create
+        appMap.put("Netflix", "Entertainment");
+        appMap.put("Zoom", "Utility");
+        appMap.put("Spotify", "Music");
+        System.out.println(appMap);
+
+        //read
+        System.out.println(appMap.get("Netflix"));
+
+        //delete
+        appMap.remove("Spotify");
+        System.out.println("After delete : "+appMap);
+
+//        update
+        appMap.put("Zoom","Online Meetings");
+        System.out.println("After Update: "+appMap);
+
+    }
+
+    private static void listiteratorMethods(List<ApplicationDTO> application) {
+        int index = 10;
+        ListIterator<ApplicationDTO> listIteratorDesc = application.listIterator(application.size());
+
+        while (listIteratorDesc.hasPrevious()){
+            System.out.println(listIteratorDesc.previous().getName());
+        }
+        while (listIteratorDesc.hasPrevious()){
+            if (listIteratorDesc.next().getName().equals("Telegram")){
+                listIteratorDesc.add(new ApplicationDTO("New",Version.V3,LocalDate.of(2025,7,7),100,Type.ENTERTAINMENT,true,0,new ArrayList<>((Collection) new OwnerDTO("New owner","new@mail.com",98574135l))));
+
+            }
+        }
+        System.out.println("-----------------------------------------------------------");
+        ListIterator<ApplicationDTO> listIteratorAsec = application.listIterator(10);
+        while (listIteratorDesc.hasPrevious()){
+            System.out.println(listIteratorAsec.previous().getName());
+
+        }
+
+        System.out.println("-----------------------------------------------------------");
+    }
+
+    private static void streamMethod(List<ApplicationDTO> application) {
         //1
         Type type = Type.ENTERTAINMENT;
         application.stream()
@@ -46,7 +91,7 @@ public class ApplicationRunner {
         //5
         System.out.println("-----------------------------------------------------------");
         application.stream()
-                .filter(applicationDTO -> applicationDTO.getName()== name && applicationDTO.getType() == type)
+                .filter(applicationDTO -> applicationDTO.getName().equals(name) && applicationDTO.getType().equals(type))
                 .map(ApplicationDTO::getVersion)
                 .forEach(System.out::println);
 
@@ -59,7 +104,7 @@ public class ApplicationRunner {
 
         //7
         System.out.println("-----------------------------------------------------------");
-        application.stream().filter(applicationDTO -> applicationDTO.getName()== name)
+        application.stream().filter(applicationDTO -> applicationDTO.getName().equals( name))
                 .flatMap(e->e.getOwners().stream())
                 .forEach(System.out::println);
 
@@ -111,8 +156,5 @@ public class ApplicationRunner {
                 .filter(a->a.getName().equals(newName))
                 .findFirst()
                 .ifPresent(applicationDTO -> applicationDTO.setOwners(Arrays.asList(new OwnerDTO("Updated Owner", "updated@app.com", 9632587417l))));
-
-
-
     }
 }
