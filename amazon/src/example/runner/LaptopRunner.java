@@ -1,7 +1,8 @@
 package example.runner;
 
-import org.example.dto.laptop.Brand;
-import org.example.dto.laptop.Computer;
+
+import example.dto.laptop.Brand;
+import example.dto.laptop.Computer;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,7 +1,8 @@
 package example.runner;
 
-import org.example.dto.product.Product;
-import org.example.dto.product.Vendor;
+
+import example.dto.product.Product;
+import example.dto.product.Vendor;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,8 +1,10 @@
 package example.runner;
 
 
-import org.example.dto.person.Address;
-import org.example.dto.person.Person;
+
+
+import example.dto.person.Address;
+import example.dto.person.Person;
 
 import java.util.HashMap;
 import java.util.Map;
