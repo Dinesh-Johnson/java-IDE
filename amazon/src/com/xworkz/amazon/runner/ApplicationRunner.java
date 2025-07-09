@@ -17,7 +17,7 @@ public class ApplicationRunner {
         List<ApplicationDTO> application = applicationRepository.findAll();
 
        // streamMethod(application);
-       // listiteratorMethods(application);
+       // listIteratorMethods(application);
 
         Map<String,String> appMap = new HashMap<>();
 
@@ -40,7 +40,7 @@ public class ApplicationRunner {
 
     }
 
-    private static void listiteratorMethods(List<ApplicationDTO> application) {
+    private static void listIteratorMethods(List<ApplicationDTO> application) {
         int index = 10;
         ListIterator<ApplicationDTO> listIteratorDesc = application.listIterator(application.size());
 
@@ -134,6 +134,8 @@ public class ApplicationRunner {
         ApplicationDTO newApp = new ApplicationDTO("SHAREit", Version.V2, LocalDate.of(2020, 6, 30), 150.00, Type.UTILITY, true, 0.0,
                 Arrays.asList(new OwnerDTO("Michael Qiu", "michael@appmail.com", 9234567812l)));
 
+
+//        List<List<>>
         //12
         application.add(49,newApp); //ADD BY INDEX
 
