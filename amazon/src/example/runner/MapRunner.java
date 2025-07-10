@@ -12,6 +12,26 @@ public class MapRunner {
         map.put("Forrest Gump", "Tom Hanks");
         map.put("Shutter Island", "Leonardo Dicaprio");
         map.put("Fight Club", "Edward Norton");
+        map.put("The Dark Knight", "Christian Bale");
+        map.put("Inception", "Leonardo Dicaprio");
+        map.put("The Matrix", "Keanu Reeves");
+        map.put("Titanic", "Leonardo Dicaprio");
+        map.put("The Godfather", "Marlon Brando");
+        map.put("The Wolf of Wall Street", "Leonardo Dicaprio");
+        map.put("Avengers: Endgame", "Robert Downey Jr.");
+        map.put("Iron Man", "Robert Downey Jr.");
+        map.put("Gladiator", "Russell Crowe");
+        map.put("The Revenant", "Leonardo Dicaprio");
+        map.put("John Wick", "Keanu Reeves");
+        map.put("Pirates of the Caribbean", "Johnny Depp");
+        map.put("The Pursuit of Happyness", "Will Smith");
+        map.put("Interstellar", "Matthew McConaughey");
+        map.put("Black Panther", "Chadwick Boseman");
+        map.put("The Shawshank Redemption", "Tim Robbins");
+        map.put("Joker", "Joaquin Phoenix");
+        map.put("The Social Network", "Jesse Eisenberg");
+        map.put("Deadpool", "Ryan Reynolds");
+        map.put("Mission: Impossible – Fallout", "Tom Cruise");
 
         Set<Map.Entry<String,String>> entrySet = map.entrySet();
 
