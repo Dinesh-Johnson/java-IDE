@@ -8,6 +8,7 @@ import example.dto.person.Person;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class PersonRunner {
     public static void main(String[] args) {
@@ -40,9 +41,12 @@ public class PersonRunner {
         map.put(new Person("Naveen", "naveen_js@gmail.com", "4712 3321 1001"), new Address("99Z", "Market Road", "Vellore", 632001));
         map.put(new Person("Bhuvana", "bhuvana.rk@gmail.com", "3104 8923 7810"), new Address("5AA", "New Bus Stand", "Cuddalore", 607001));
 
-        map.keySet().forEach(System.out::println);
-        map.values().forEach(System.out::println);
+//        map.keySet().forEach(System.out::println);
+//        map.values().forEach(System.out::println);
 
+        Set<Map.Entry<Person,Address>> entrySet= map.entrySet();
+
+        entrySet.forEach(System.out::println);
 
     }
 

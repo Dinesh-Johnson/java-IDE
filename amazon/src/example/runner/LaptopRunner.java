@@ -6,6 +6,7 @@ import example.dto.laptop.Computer;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class LaptopRunner {
 
@@ -39,7 +40,9 @@ public class LaptopRunner {
         map.put(new Brand("Acer Aspire 7", "aspire@acer.com", "General", "1 Year"), new Computer("Windows 11", "16GB", "Ryzen 5 5500U", "512GB SSD"));
         map.put(new Brand("HP Pavilion Gaming", "pavilion@hp.com", "Gaming", "1 Year"), new Computer("Windows 11", "16GB", "Ryzen 5 5600H", "512GB SSD"));
 
-        map.keySet().forEach(System.out::println);
-        map.values().forEach(System.out::println);
+//        map.keySet().forEach(System.out::println);
+//        map.values().forEach(System.out::println);
+        Set<Map.Entry<Brand,Computer>> entrySet= map.entrySet();
+        entrySet.forEach(System.out::println);
     }
 }
