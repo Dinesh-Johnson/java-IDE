@@ -1,63 +1,92 @@
 package example.runner;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class MapRunner {
     public static void main(String[] args) {
 
-        Map<String,String> map =new HashMap<>();
-        map.put("Schindler's List","Liam Neeson");
-        map.put("Pulp Fiction","Samuel L Jackson ");
-        map.put("Forrest Gump","Tom Hanks");
-        map.put("Shutter Island","Leonardo Dicaprio");
-        map.put("Fight Club","Edward Norton");
+        Map<String,String> map =new LinkedHashMap<>();
+        //put()
+        map.put("Schindler's List", "Liam Neeson");
+        map.put("Pulp Fiction", "Samuel L Jackson");
+        map.put("Forrest Gump", "Tom Hanks");
+        map.put("Shutter Island", "Leonardo Dicaprio");
+        map.put("Fight Club", "Edward Norton");
 
         Set<Map.Entry<String,String>> entrySet = map.entrySet();
 
-        entrySet.forEach(e-> System.out.println("Movie(KEY) :"+e.getKey()+" "+" Actor(VALUE) :"+e.getValue()));
+        //entrySet.forEach(e-> System.out.println("Movie(KEY) :"+e.getKey()+" "+" Actor(VALUE) :"+e.getValue()));
+
+        // size()
+        System.out.println("Size: " + map.size());
+        System.out.println();
+
+        // get()
+        System.out.println("Get 'Forrest Gump': " + map.get("Forrest Gump"));
+        System.out.println();
+
+        // containsKey()
+        System.out.println("Contains key 'Fight Club'? " + map.containsKey("Fight Club"));
+        System.out.println();
+
+        // containsValue()
+        System.out.println("Contains value 'Tom Hanks'? " + map.containsValue("Tom Hanks"));
+        System.out.println();
+
+        // keySet()
+        System.out.println("All Keys:");
+        Set<String> keys = map.keySet();
+        keys.forEach(System.out::println);
+        System.out.println();
 
 
+        // values()
+        System.out.println();
+        System.out.println("All Values:");
+        Collection<String> values = map.values();
+        values.forEach(System.out::println);
+        System.out.println();
+
+
+        // entrySet()
+        System.out.println("All Entries:");
+        Set<Map.Entry<String, String>> entries = map.entrySet();
+        entries.forEach(System.out::println);
+        System.out.println();
+
+
+        // putIfAbsent()
+        map.putIfAbsent("The Revenant", "Leonardo Dicaprio");
+        System.out.println("After putIfAbsent:");
+        System.out.println(map);
+
+        // replace()
+        map.replace("Pulp Fiction", "John Travolta");
+        System.out.println("After replace:");
+        System.out.println(map);
+        System.out.println();
+
+
+        // remove()
+        map.remove("Shutter Island");
+        System.out.println("After remove:");
+        System.out.println(map);
+        System.out.println();
+
+
+        // isEmpty()
+        System.out.println();
+        System.out.println("Is map empty? " + map.isEmpty());
+        System.out.println();
+
+
+        // clear()
+        map.clear();
+        System.out.println();
+        System.out.println("Map: " + map);
         System.out.println("Size: " + map.size());
 
-        System.out.println("Get key 2: " + map.get(2));
-
-        System.out.println("Contains key 3? " + map.containsKey(3));
-
-        System.out.println("Contains value 'Pulp Fiction'? " + map.containsValue("Pulp Fiction"));
-
-        System.out.println("All Keys:");
-        for (String k : map.keySet()) {
-            System.out.println(k);
-        }
-
-        System.out.println("All Values:");
-        for (String v : map.values()) {
-            System.out.println(v);
-        }
-
-        System.out.println("All Entries:");
-        for (Map.Entry<String, String> entry : map.entrySet()) {
-            System.out.println(entry.getKey() + " = " + entry.getValue());
-        }
-
-        map.remove(2);
-        System.out.println("After removing key 2: " + map);
-
         System.out.println("Is map empty? " + map.isEmpty());
-
-        map.putIfAbsent("Forrest Gump","Tom Hanks");
-        map.putIfAbsent("Shutter Island","Leonardo Dicaprio");
-        System.out.println("After putIfAbsent: " + map);
-
-
-        map.replace("Schindler's List", "Ben Kingsley");
-        System.out.println("After replace: " + map);
-
-        map.clear();
-        System.out.println("After clear, size: " + map.size());
 
 
     }
