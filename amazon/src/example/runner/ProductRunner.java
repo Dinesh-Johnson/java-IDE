@@ -1,10 +1,12 @@
 package example.runner;
 
-import org.example.dto.product.Product;
-import org.example.dto.product.Vendor;
+
+import example.dto.product.Product;
+import example.dto.product.Vendor;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class ProductRunner {
     public static void main(String[] args) {
@@ -37,8 +39,11 @@ public class ProductRunner {
         map.put(new Product("Projector", "Office Equipment", 29000, "PR808", 24), new Vendor("BenQ", "GST808", "2000"));
         map.put(new Product("Gaming Console", "Gaming", 40000, "GC909", 25), new Vendor("Sony PlayStation", "GST909", "1994"));
 
-        map.keySet().forEach(System.out::println);
-        map.values().forEach(System.out::println);
+//        map.keySet().forEach(System.out::println);
+//        map.values().forEach(System.out::println);
+
+        Set<Map.Entry<Product,Vendor>> entrySet= map.entrySet();
+        entrySet.forEach(System.out::println);
 
     }
 }
