@@ -53,8 +53,18 @@ public class CustomerRunner {
                 .forEach(System.out::println);
         System.out.println("-----------------------------------------------------------------------------------------------------");
 
+        //byDistinctCoustomerByCoutry(customer);
 
 
+    }
 
+    private static void byDistinctCoustomerByCoutry(Collection<Customer> customer) {
+        Map<String,Customer> map=  customer.stream().collect(Collectors.toMap(
+                e->e.getPassport().getCountry().getName(),
+                e->e,
+                (ex,re)->ex
+                ));
+
+        map.values().forEach(System.out::println);
     }
 }
