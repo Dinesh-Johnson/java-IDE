@@ -1,6 +1,6 @@
 public class ArmstrongCheck {
     public static void main(String[] args) {
-        int num = 265; // you can change the number
+        int num = 265;
         int original = num;
         int sum = 0;
 
