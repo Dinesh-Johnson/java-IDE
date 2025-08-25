@@ -17,7 +17,7 @@ public class CountCharacters {
                 constant++;
             }else if (Character.isDigit(ch)){
                 digits++;
-            }else if (Character.isWhitespace(ch)){
+            }else if (Character.isSpaceChar(ch)){
                 spaces++;
             }
         }
